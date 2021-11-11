@@ -49,7 +49,7 @@
 
                         <div class="row mt-3">
                             <div class="col-sm-4">
-                                <p>First Namea</p>
+                                <p>First Name</p>
                             </div>
                             <div class="col-sm-1">
                                 <p> : </p>
