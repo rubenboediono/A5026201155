@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Link google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/BTC_Logo.svg/1200px-BTC_Logo.svg.png">
+</head>
+<style>
+    body {
+        background-image: url('https://www.cognierblock.com/img/bi-admin.gif');
+        background-size: cover;
+
+
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .top3 {
+        text-align: center;
+        background-color: rgb(214, 194, 168);
+
+    }
+
+    .fun {
+        width: 90%;
+        margin: 50px;
+    }
+
+    .gif {
+        max-width: 100%;
+    }
+
+    .fotobinance {
+        width: 250px;
+        height: 300px;
+        padding-bottom: 100px;
+
+    }
+
+    .fotoindodax {
+        width: 200px;
+        height: 200px;
+    }
+
+    .fototko {
+        width: 200px;
+        height: 200px;
+    }
+
+    .coinmarketcap-currency-widget {
+        margin: auto;
+    }
+</style>
+
+<!--Tempat beli-->
+<button class="fun" data-toggle="collapse" data-target="#toko">
+    Tempat membeli crypto
+</button>
+<div id="toko">
+    <div class="container-fluid-padding ">
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <a href="https://www.tokocrypto.com/">
+                    <img class="fototko" src="https://s2.coinmarketcap.com/static/img/coins/200x200/9020.png">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="https://indodax.com/">
+                    <img class="fotoindodax"
+                        src="data:image/png;base64,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">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="https://binance.com/">
+
+
+                    <img class="fotobinance" src="https://cryptologos.cc/logos/thumbs/binance-coin.png">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!--Navbarnya-->
+<h1>
+    <nav class="navbar fixed-top navbar-dark bg-light justify-content-lg-between">
+        <a class="navbar-brand" style="color: black;">Cryptocurrency</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-3 my-sm-0" type="submit">Search COIN</button>
+        </form>
+    </nav>
+</h1>
+<!--button info atas-->
+<h1>
+    <div class="container-fluid">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+            style="margin-top: 50px;">
+            More Info
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Insert your personal data</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail address</label>
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Flexnya-->
+        <div class="container satu mt-2">
+            <h2 class="top3">Top Three Most Popular Coin</h2>
+            <div class=" d-flex flex-wrap justify-content-around">
+                <!--BITCOIN-->
+                <div class="chara p-2 m-2 order-1"><img src="https://cryptologos.cc/logos/thumbs/bitcoin.png">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                        Bitcoin
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Bitcoin</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body bodybtc">
+                                    Bitcoin is a decentralized cryptocurrency originally described in a 2008
+                                    whitepaper by a person, or
+                                    group of people, using the alias Satoshi Nakamoto. It was launched soon after,
+                                    in January 2009.
+
+                                    Bitcoin is a peer-to-peer online currency, meaning that all transactions happen
+                                    directly between equal,
+                                    independent network participants, without the need for any intermediary to
+                                    permit or facilitate them.
+                                    Bitcoin was created, according to Nakamoto’s own words, to allow “online
+                                    payments to be sent directly
+                                    from one party to another without going through a financial institution.”
+
+                                    Some concepts for a similar type of a decentralized electronic currency precede
+                                    BTC, but Bitcoin holds
+                                    the distinction of being the first-ever cryptocurrency to come into actual use.
+
+                                    Who Are the Founders of Bitcoin?
+                                    Bitcoin’s original inventor is known under a pseudonym, Satoshi Nakamoto. As of
+                                    2020, the true identity
+                                    of the person — or organization — that is behind the alias remains unknown.
+
+                                    On October 31, 2008, Nakamoto published Bitcoin’s whitepaper, which described in
+                                    detail how a
+                                    peer-to-peer, online currency could be implemented. They proposed to use a
+                                    decentralized ledger of
+                                    transactions packaged in batches (called “blocks”) and secured by cryptographic
+                                    algorithms — the whole
+                                    system would later be dubbed “blockchain.”
+
+                                    Just two months later, on January 3, 2009, Nakamoto mined the first block on the
+                                    Bitcoin network, known
+                                    as the genesis block, thus launching the world’s first cryptocurrency.
+
+                                    However, while Nakamoto was the original inventor of Bitcoin, as well as the
+                                    author of its very first
+                                    implementation, over the years a large number of people have contributed to
+                                    improving the
+                                    cryptocurrency’s software by patching vulnerabilities and adding new features.
+
+                                    Bitcoin’s source code repository on GitHub lists more than 750 contributors,
+                                    with some of the key ones
+                                    being Wladimir J. van der Laan, Marco Falke, Pieter Wuille, Gavin Andresen,
+                                    Jonas Schnelli and others.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        <script type="text/javascript"
+                            src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+                    <div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary="USD"
+                        data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true"
+                        data-statsticker="true" data-stats="USD"></div>
+
+                    </p>
+                </div>
+                <!--ETHEREUM-->
+                <div class="chara p-2 m-2 order-3"><img class="img-fluid"
+                        src="https://cryptologos.cc/logos/thumbs/ethereum.png">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        Ethereum
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Ethereum</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    What Is Ethereum (ETH)?
+                                    Ethereum is a decentralized open-source blockchain system that features its own
+                                    cryptocurrency, Ether.
+                                    ETH works as a platform for numerous other cryptocurrencies, as well as for the
+                                    execution of
+                                    decentralized smart contracts.
+
+                                    Ethereum was first described in a 2013 whitepaper by Vitalik Buterin. Buterin,
+                                    along with other
+                                    co-founders, secured funding for the project in an online public crowd sale in
+                                    the summer of 2014. The
+                                    project team managed to raise $18.3 million in Bitcoin, and Ethereum’s price in
+                                    the Initial Coin
+                                    Offering (ICO) was $0.311, with over 60 million Ether sold. Taking Ethereum’s
+                                    price now, this puts the
+                                    return on investment (ROI) at an annualized rate of over 270%, essentially
+                                    almost quadrupling your
+                                    investment every year since the summer of 2014.
+
+                                    The Ethereum Foundation officially launched the blockchain on July 30, 2015,
+                                    under the prototype
+                                    codenamed “Frontier.” Since then, there has been several network updates —
+                                    “Constantinople” on Feb. 28,
+                                    2019, “Istanbul” on Dec. 8, 2019, “Muir Glacier” on Jan. 2, 2020, “Berlin” on
+                                    April 14, 2021, and most
+                                    recently on Aug. 5, 2021, the “London” hard fork.
+
+                                    Ethereum’s own purported goal is to become a global platform for decentralized
+                                    applications, allowing
+                                    users from all over the world to write and run software that is resistant to
+                                    censorship, downtime and
+                                    fraud.
+
+                                    Who Are the Founders of Ethereum?
+                                    Ethereum has a total of eight co-founders — an unusually large number for a
+                                    crypto project. They first
+                                    met on June 7, 2014, in Zug, Switzerland.
+
+                                    Russian-Canadian Vitalik Buterin is perhaps the best known of the bunch. He
+                                    authored the original white
+                                    paper that first described Ethereum in 2013 and still works on improving the
+                                    platform to this day. Prior
+                                    to ETH, Buterin co-founded and wrote for the Bitcoin Magazine news website.
+                                    British programmer Gavin Wood is arguably the second most important co-founder
+                                    of ETH, as he coded the
+                                    first technical implementation of Ethereum in the C++ programming language,
+                                    proposed Ethereum’s native
+                                    programming language Solidity and was the first chief technology officer of the
+                                    Ethereum Foundation.
+                                    Before Ethereum, Wood was a research scientist at Microsoft. Afterward, he moved
+                                    on to establish the
+                                    Web3 Foundation.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        <script type="text/javascript"
+                            src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+                    <div class="coinmarketcap-currency-widget" data-currencyid="1027" data-base="USD"
+                        data-secondary="USD" data-ticker="true" data-rank="true" data-marketcap="true"
+                        data-volume="true" data-statsticker="true" data-stats="USD"></div>
+                    </p>
+                </div>
+                <!--CARDANO-->
+                <div class="chara p-2 m-2  order-4"><img src="https://cryptologos.cc/logos/thumbs/cardano.png">
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Cardano
+                    </button>
+
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Cardano</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    What Is Cardano (ADA)?
+                                    Cardano is a proof-of-stake blockchain platform that says its goal is to allow
+                                    “changemakers, innovators and visionaries” to bring about positive global
+                                    change.
+
+                                    To learn more about this project, check out our deep dive of Cardano.
+
+                                    The open-source project also aims to “redistribute power from unaccountable
+                                    structures to the margins to individuals” — helping to create a society that is
+                                    more secure, transparent and fair.
+
+                                    Cardano was founded back in 2017, and named after the 16th century Italian
+                                    polymath Gerolamo Cardano. The native ADA token takes its name from the 19th
+                                    century mathematician Ada Lovelace, widely regarded as the world’s first
+                                    computer programmer. The ADA token is designed to ensure that owners can
+                                    participate in the operation of the network. Because of this, those who hold the
+                                    cryptocurrency have the right to vote on any proposed changes to the software.
+
+                                    The team behind the layered blockchain say that there have already been some
+                                    compelling use cases for its technology, which aims to allow decentralized apps
+                                    and smart contracts to be developed with modularity.
+
+                                    In August 2021, Charles Hoskinson announced the launch of the Alonzo hard fork,
+                                    causing Cardano price to surge, gaining 116% in the following month. On Sept.
+                                    12, 2021, the Cardano ‘Alonzo’ hard fork officially launched, bringing smart
+                                    contract functionality to the blockchain. Over 100 smart contracts were deployed
+                                    in the following 24 hours after the launch.
+
+                                    Cardano is used by agricultural companies to track fresh produce from field to
+                                    fork, while other products built on the platform allow educational credentials
+                                    to be stored in a tamper-proof way, and retailers to clamp down on counterfeit
+                                    goods.
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        <script type="text/javascript"
+                            src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+                    <div class="coinmarketcap-currency-widget" data-currencyid="2010" data-base="USD"
+                        data-secondary="USD" data-ticker="true" data-rank="true" data-marketcap="true"
+                        data-volume="true" data-statsticker="true" data-stats="USD"></div>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--Layar pertama-->
+    <div class="container-fluid-padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <hr style="height:2px;border-width:0;color:gray;background-color:gray;width: auto;">
+                <h1 class="display-4"><b>HI!</b></h1>
+            </div>
+            <hr>
+            <div class="col-12">
+                <p>SELAMAT DATANG DI WEBSITE BOOTSTRAP 4 SAYA!</p>
+                <hr style="height:2px;border-width:0;color:gray;background-color:gray;width: auto;">
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!--koolom baawh-->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <i class="fas"></i>
+                <h3>HTML5</h3>
+                <p>Dibuat menggunakan HTML5</p>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <i class="fas"></i>
+                <h3>BOOTSTRAP</h3>
+                <p>Dibuat menggunakan Bootstrap 4</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <i class="fab"></i>
+                <h3>CSS</h3>
+                <p>Dibuat menggunakan CSS</p>
+            </div>
+        </div>
+        <hr class="my-4">
+    </div>
+
+
+
+    </div>
+    </div>
+
+</html>
