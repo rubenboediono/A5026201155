@@ -92,8 +92,8 @@
                     <a href="praktikum1.html">Praktikum1</a>
                     <a href="assignment4">Tugas4</a>
                     <a href="praktikum2">Praktikum2</a>
-                    <a href="https://nova.laravel.com">ETS</a>
-                    <a href="isiannama">Tugas PHP</a>
+                    <a href="formEts">ETS</a>
+                    <a href="formHtmlPhp">Tugas PHP</a>
                 </div>
             </div>
         </div>
