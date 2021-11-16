@@ -81,15 +81,16 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Rubennnnnnnnnnnn
+                    Ruben Tricahya Boediono <br>
+                    5026201155
                 </div>
 
                 <div class="links">
                     <a href="Assignment1.html">Tugas1</a>
                     <a href="assignment2.html">Tugas2</a>
-                    <a href="https://laravel-news.com">Tugas3</a>
+                    <a href="assignment3.html">Tugas3</a>
                     <a href="praktikum1.html">Praktikum1</a>
-                    <a href="https://nova.laravel.com">Tugas4</a>
+                    <a href="assignment4">Tugas4</a>
                     <a href="praktikum2">Praktikum2</a>
                     <a href="https://nova.laravel.com">ETS</a>
                     <a href="isiannama">Tugas PHP</a>
