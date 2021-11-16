@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 
 class ViewController extends Controller
 {
-    //
-    function showForm(){
-        //code untuk mengload data yang akan dimuat di form
-        return view('showGreetings');
-    }
-    function resultGreetings(){
-        //code untuk mengload data yang akan dimuat di form
-        return view('tugas');
 
+    function etsShow(){
+        return view('ets');
+    }
+    function phpShowHTML(){
+        return view ('assignphpHTML');
+    }
+    function phpShowPHP(){
+        return view('assignphp');
     }
 }
