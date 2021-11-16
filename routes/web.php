@@ -25,5 +25,11 @@ Route::get('assignment4', function () {
 
 
 //untuk yg ngeload banyak proses
-Route::get('isiannama',"ViewController@showForm");
-Route::post('greetings',"ViewController@resultGreetings");
+Route::get('formEts',"ViewController@etsShow");
+
+Route::get('formHtmlPhp',"ViewController@phpShowHTML");
+Route::post('formPhp',"ViewController@phpShowPHP");
+
+
+
+
