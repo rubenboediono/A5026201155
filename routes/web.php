@@ -16,8 +16,13 @@ Route::get('/', function () {
 });
 Route::get('praktikum2', function () {
     //yang disini untuk yg tidak banyak proses
-    return view('htmlprak2');
+    return view('praktikum2');
 });
+Route::get('assignment4', function () {
+    //yang disini untuk yg tidak banyak proses
+    return view('assignment4');
+});
+
 
 //untuk yg ngeload banyak proses
 Route::get('isiannama',"ViewController@showForm");
