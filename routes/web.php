@@ -30,6 +30,12 @@ Route::get('formEts',"ViewController@etsShow");
 Route::get('formHtmlPhp',"ViewController@phpShowHTML");
 Route::post('formPhp',"ViewController@phpShowPHP");
 
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 
 
 
