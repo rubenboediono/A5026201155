@@ -17,7 +17,7 @@
 		{{ csrf_field() }}
 		<input type="hidden" name="ID" value="{{ $p->ID }}"> <br/>
 		IDPegawai <input type="number" required="required" name="IDPegawai" value="{{ $p->IDPegawai }}"> <br/>
-		Bulan <input type="number" name="Bulan" required="required" value="{{ $p->Bulan }}"> <br/>
+		Bulan <input type="number" name="Bulan" required="required" min="1" max="12" value="{{ $p->Bulan }}"> <br/>
         Tahun <input type="number" min="1900" max="2100" name="Tahun" required="required" value="{{ $p->Tahun }}"> <br/>
         Gaji <input type="number" name="Gaji" required="required" value="{{ $p->Gaji }}"> <br/>
 		Tunjangan <input type="number" name="Tunjangan" required="required" value="{{ $p->Tunjangan }}">
