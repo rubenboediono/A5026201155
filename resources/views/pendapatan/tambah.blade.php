@@ -17,7 +17,7 @@
 		{{ csrf_field() }}
 		ID <input type="number" name="ID" required="required"> <br/>
 		IDPegawai <input type="number" name="IDPegawai" required="required"> <br/>
-        Bulan <input type="number" name="Bulan" required="required"> <br/>
+        Bulan <input type="number" name="Bulan" required="required" min="1" max="12"> <br/>
         Tahun <input type="number" min="1900" max="2100" name="Tahun" required="required"> <br/>
 		Gaji <input type="number" name="Gaji" required="required"> <br/>
 		Tunjangan <input type="number" name="Tunjangan" required="required"> <br/>
