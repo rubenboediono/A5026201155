@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html>
+@extends('layout.bahagia')
+@section('title','Data Absen Pegawai')
+@section('konten')
+
+@section('judulhalaman', 'Daftar Absensi Pegawai')
 <head>
 	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
 </head>
@@ -43,3 +46,4 @@
 
 </body>
 </html>
+@endsection

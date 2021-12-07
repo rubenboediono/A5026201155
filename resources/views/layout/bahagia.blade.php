@@ -18,13 +18,50 @@
 
 </head>
 
+
 <body>
+    <div class="container">
+        <header class="sm text-center">
+            <div class="col sm-6">
+                <img src="{{ URL::asset('/image/200.jpg') }}" width = "150px" height="150px">
+                <br>
+                <h1>
+                    Ruben Tricahya Boediono
+                </h1>
+                <h2>
+                    5026201155
+                </h2>
+            </div>
 
-    <h3>@yield('judulhalaman')</h3>
+        </header>
 
-    @section('konten')
+        <div class="row">
+                <div class="col-sm-4 text-center"  >
+                    Pilihan data untuk diakses
 
-    @show
+                      <nav aria-label="breadcrumb" >
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/pegawai">Pegawai</a></li>
+                          <li class="breadcrumb-item"><a href="/absen">Absen</a></li>
+                          <li class="breadcrumb-item"><a href="/pendapatan">Pendapatan</a></li>
+                          <li class="breadcrumb-item active" aria-current="/praktikum">Praktikum</li>
+                        </ol>
+                      </nav>
+                </div>
+                <div class="col-sm-8 text-center" >
+
+                    <div>
+                        <h3>@yield('judulhalaman')</h3>
+
+                        @section('konten')
+
+                        @show
+                    </div>
+                </div>
+
+
+        </div>
+    </div>
 
 </body>
 
