@@ -2,21 +2,22 @@
 @section('title','Data Absen Pegawai')
 @section('konten')
 
-@section('judulhalaman', 'Daftar Absensi Pegawai')
+@section('judulhalaman', 'Daftar Pegawai')
 <head>
 	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
 </head>
 <body>
 
+    <div style="border-style: groove; border-radius : 25px;  padding-left : 50px; padding-right : 50px">
 
-	<h3>Data Pegawai</h3>
+
 
 	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
 
 	<br/>
 	<br/>
 
-	<table border="1">
+	<table border="2" class="table table-hover">
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
@@ -38,6 +39,10 @@
 		</tr>
 		@endforeach
 	</table>
+    <br>
+    <br>
+    </div>
+
 
 
 </body>

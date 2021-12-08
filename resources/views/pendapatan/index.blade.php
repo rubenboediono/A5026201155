@@ -1,23 +1,27 @@
 @extends('layout.bahagia')
 @section('title','Data Absen Pegawai')
 @section('konten')
-
-@section('judulhalaman', 'Daftar Absensi Pegawai')
+@section('judulhalaman', 'Daftar Pendapatan')
 <head>
 	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
 </head>
-<body>
 
-	<h3>Data Pendapatan</h3>
+<style>
+
+</style>
+
+<body>
+    <div style="border-style: groove; border-radius : 25px;  padding-left : 50px; padding-right : 50px">
+
 
 	<a href="/pendapatan/tambah"> + Tambah Pendapatan Baru</a>
 
 	<br/>
 	<br/>
 
-	<table border="1">
+	<table border="2" class="table table-hover">
 		<tr>
-			<th>ID</th>
+
 			<th>IDPegawai</th>
 			<th>Bulan</th>
 			<th>Tahun</th>
@@ -28,7 +32,7 @@
 		</tr>
 		@foreach($pendapatan as $p)
 		<tr>
-			<td>{{ $p->ID }}</td>
+
 			<td>{{ $p->IDPegawai }}</td>
 			<td>{{ $p->Bulan }}</td>
 			<td>{{ $p->Tahun }}</td>
@@ -41,9 +45,12 @@
 			</td>
 		</tr>
 		@endforeach
+
 	</table>
 
-
+    <br>
+        <br>
+    </div>
 </body>
 </html>
 @endsection
