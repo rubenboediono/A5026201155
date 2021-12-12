@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
-class PegawaiController extends Controller
+class ModemController extends Controller
 {
     public function index()
     {
         // mengambil data dari table pegawai
         //$pegawai = DB::table('pegawai')->get(); //hasil get() adalah array of object
-        $pegawai = DB::table('pegawai')->paginate(2);
+        $modem = DB::table('modem')->paginate(1);
         // mengirim data pegawai ke view index
-        return view('pegawai.index', ['pegawai' => $pegawai]);
+        return view('modem.index', ['modem' => $modem]);
     }
         //mencari data pegawai
         public function cari(Request $request)
@@ -23,13 +23,14 @@ class PegawaiController extends Controller
             $cari = $request->cari;
 
                 // mengambil data dari table pegawai sesuai pencarian data
-            $pegawai = DB::table('pegawai')
-            ->where('pegawai_nama','like',"%".$cari."%")
-            ->orWhere('pegawai_alamat','like',"%".$cari."%")
+            $modem = DB::table('modem')
+            ->where('merkmodem','like',"%".$cari."%")
+            ->orWhere('stockmodem','like',"%".$cari."%")
+            ->orWhere('tersedia','like',"%".$cari."%")
             ->paginate();
 
                 // mengirim data pegawai ke view index
-            return view('pegawai.index',['pegawai' => $pegawai]);
+            return view('modem.index',['modem' => $modem]);
 
         }
 
@@ -38,60 +39,60 @@ class PegawaiController extends Controller
     {
 
         // memanggil view tambah
-        return view('pegawai.tambah');
+        return view('modem.tambah');
     }
     // method untuk insert data ke table pegawai
     public function store(Request $request)
     {
         // insert data ke table pegawai
-        DB::table('pegawai')->insert([
-            'pegawai_nama' => $request->nama,
-            'pegawai_jabatan' => $request->jabatan,
-            'pegawai_umur' => $request->umur,
-            'pegawai_alamat' => $request->alamat
+        DB::table('modem')->insert([
+            'kodemodem' => $request->kodemodem,
+            'merkmodem' => $request->merkmodem,
+            'stockmodem' => $request->stockmodem,
+            'tersedia' => $request->tersedia
         ]);
         // alihkan halaman ke halaman pegawai
-        return redirect('/pegawai');
+        return redirect('/modem');
     }
 
     // method untuk edit data pegawai
     public function edit($id)
     {
         // mengambil data pegawai berdasarkan id yang dipilih
-        $pegawai = DB::table('pegawai')->where('pegawai_id', $id)->get();
+        $modem = DB::table('modem')->where('kodemodem', $id)->get();
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('pegawai.edit', ['pegawai' => $pegawai]);
+        return view('modem.edit', ['modem' => $modem]);
     }
     // method untuk melihat detail data pegawai
     public function detail($id)
     {
         // mengambil data pegawai berdasarkan id yang dipilih
-        $pegawai = DB::table('pegawai')->where('pegawai_id', $id)->get();
+        $modem = DB::table('modem')->where('kodemodem', $id)->get();
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('pegawai.detail', ['pegawai' => $pegawai]);
+        return view('modem.detail', ['modem' => $modem]);
     }
 
     // update data pegawai
     public function update(Request $request)
     {
         // update data pegawai
-        DB::table('pegawai')->where('pegawai_id', $request->id)->update([
-            'pegawai_nama' => $request->nama,
-            'pegawai_jabatan' => $request->jabatan,
-            'pegawai_umur' => $request->umur,
-            'pegawai_alamat' => $request->alamat
+        DB::table('modem')->where('kodemodem', $request->kodemodem)->update([
+            'kodemodem' => $request->kodemodem,
+            'merkmodem' => $request->merkmodem,
+            'stockmodem' => $request->stockmodem,
+            'tersedia' => $request->tersedia
         ]);
         // alihkan halaman ke halaman pegawai
-        return redirect('/pegawai');
+        return redirect('/modem');
     }
     // method untuk hapus data pegawai
     public function hapus($id)
     {
         // menghapus data pegawai berdasarkan id yang dipilih
-        DB::table('pegawai')->where('pegawai_id', $id)->delete();
+        DB::table('modem')->where('kodemodem', $id)->delete();
 
         // alihkan halaman ke halaman pegawai
-        return redirect('/pegawai');
+        return redirect('/modem');
     }
 
 }
