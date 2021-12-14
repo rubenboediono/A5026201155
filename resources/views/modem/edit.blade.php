@@ -20,7 +20,7 @@
     <div class="form-group">
         <form action="/modem/update" method="post">
             {{ csrf_field() }}
-            <input  type="hidden" name="id" value="{{ $m->kodemodem }}"> <br/>
+            kodemodem <input class="form-control" type="text" name="kodemodem" required="required" value="{{$m ->kodemodem}}"> <br/>
             merkmodem <input class="form-control" type="text" name="merkmodem" required="required" value="{{$m ->merkmodem}}"> <br/>
             stockmodem <input class="form-control" type="number" name="stockmodem" required="required" value="{{$m ->stockmodem}}"> <br/>
             tersedia <select class="form-control" type="text" name="tersedia" required="required" value="{{$m ->tersedia}}">

@@ -66,5 +66,6 @@ Route::get('/modem/edit/{id}','ModemController@edit');
 Route::get('/modem/hapus/{id}','ModemController@hapus');
 Route::get('/modem/cari','ModemController@cari');
 Route::get('/modem/view/{id}','ModemController@detail');
+Route::post('/modem/update','ModemController@update');
 
 
