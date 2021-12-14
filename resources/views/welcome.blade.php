@@ -94,7 +94,7 @@
                     <a href="praktikum2">Praktikum2</a>
                     <a href="formEts">ETS</a>
                     <a href="formHtmlPhp">Tugas PHP</a>
-                    <a href="/absen">Absen</a>
+                    <a href="/absen">TUGAS CRUD + Praktikum</a>
                 </div>
             </div>
         </div>
