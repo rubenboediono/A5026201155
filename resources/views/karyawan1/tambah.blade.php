@@ -19,7 +19,7 @@
             NIP <input class="form-control" type="text" name="NIP" required="required"> <br/>
             Nama <input class="form-control" type="text" name="Nama" required="required"> <br/>
             Pangkat <input class="form-control" type="text" name="Pangkat" required="required"> <br/>
-            Gaji <input class="form-control" type="number" name="Gaji" required="required"> <br/>
+            Gaji <input class="form-control" type="text" name="Gaji" required="required"> <br/>
             <input type="submit" value="Simpan Data" class="btn btn-success">
         </div>
         </div>
