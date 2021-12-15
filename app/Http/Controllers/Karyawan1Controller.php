@@ -10,10 +10,10 @@ class Karyawan1Controller extends Controller
 {
     public function index()
     {
-        // mengambil data dari table karyawan
+        // mengambil data dari table karyawan1
 
         $karyawan1 = DB::table('karyawan1')->paginate(3);
-        // mengirim data pegawai ke view index
+        // mengirim data karyawan1 ke view karyawan1
         return view('karyawan1.index', ['karyawan1' => $karyawan1]);
     }
 
@@ -25,17 +25,17 @@ class Karyawan1Controller extends Controller
         // memanggil view tambah
         return view('karyawan1.tambah');
     }
-    // method untuk insert data ke table pegawai
+    // method untuk insert data ke table karyawan1
     public function store(Request $request)
     {
-        // insert data ke table pegawai
+        // insert data ke table karyawan1
         DB::table('karyawan1')->insert([
             'NIP' => $request->NIP,
             'Nama' => $request->Nama,
             'Pangkat' => $request->Pangkat,
             'Gaji' => $request->Gaji
         ]);
-        // alihkan halaman ke halaman pegawai
+        // alihkan halaman ke halaman karyawan1
         return redirect('/karyawan1');
     }
 
