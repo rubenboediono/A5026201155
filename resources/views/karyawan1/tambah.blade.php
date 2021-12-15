@@ -1,10 +1,8 @@
 @extends('layout.bahagia')
-@section('title','Data Modem')
+@section('title','Data Karyawan')
 @section('konten')
-@section('judulhalaman', 'Tambah Modem')
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
+@section('judulhalaman', 'Tambah Data Karyawan')
+
 <body>
 
 
