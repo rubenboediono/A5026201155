@@ -49,6 +49,7 @@
                               <li class="breadcrumb-item"><a href="/absen">Absen</a></li> <br>
                               <li class="breadcrumb-item"><a href="/pendapatan">Pendapatan</a></li> <br>
                               <li class="breadcrumb-item"><a href="/modem">Modem</a></li> <br>
+                              <li class="breadcrumb-item"><a href="/karyawan1">Karyawan1 (B2)</a></li> <br>
                             </ol>
                           </nav>
                     </div>

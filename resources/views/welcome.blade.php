@@ -95,6 +95,7 @@
                     <a href="formEts">ETS</a>
                     <a href="formHtmlPhp">Tugas PHP</a>
                     <a href="/absen">TUGAS CRUD + Praktikum</a>
+                    <a href="/karyawan1">UAS B2 Karyawan1</a>
                 </div>
             </div>
         </div>

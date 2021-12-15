@@ -68,4 +68,10 @@ Route::get('/modem/cari','ModemController@cari');
 Route::get('/modem/view/{id}','ModemController@detail');
 Route::post('/modem/update','ModemController@update');
 
+//route CRUD karyawan1
+Route::get('/karyawan1','Karyawan1Controller@index');
+Route::get('/karyawan1/tambah','Karyawan1Controller@tambah');
+Route::post('/karyawan1/store','Karyawan1Controller@store');
+Route::get('/karyawan1/hapus/{id}','Karyawan1Controller@hapus');
+
 
